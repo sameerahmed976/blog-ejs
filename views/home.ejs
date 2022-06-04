@@ -1,0 +1,18 @@
+<%- include("partials/header") -%>
+
+<main>
+  <h1>Home</h1>
+  <p><%= homeStartingContent %></p>
+
+  <% posts.map(e=>{ %>
+
+  <h1><%= e.compose %></h1>
+  <p>
+    <%= e.textArea.substring(0,100) + "..." %>
+    <a href="/posts/<%= e.compose %>">Readmore</a>
+  </p>
+
+  <% }) %>
+</main>
+
+<%- include("partials/footer") -%>
